@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main > div:nth-child(2) {
+	width: 100%;
+}
+
+article > div.prose > ul > li {
+	margin-top: -2px
+}
+
+.prose :where(blockquote p:first-of-type):not(:where([class~="not-prose"],[class~="not-prose"] *))::before {
+	content: "" !important;
+}
+.prose :where(blockquote):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+	font-style: normal !important;
+	font-weight: normal !important;
+}
+
+video {
+	border-radius: 0.5rem;
+}
