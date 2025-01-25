@@ -1,20 +1,24 @@
-# deps
-/node_modules
-
-# generated content
 .contentlayer
 .content-collections
 .source
 
-# test & build
-/coverage
-/.next/
-/out/
-/build
-*.tsbuildinfo
+.vscode
+.idea
+.next
+.cache
+node_modules
+build
+temp
 
-# misc
-.DS_Store
+.env
+.env*.local
+next-env.d.ts
+.vercel
+test.js
+
+/coverage
+/out/
+*.tsbuildinfo
 *.pem
 /.pnp
 .pnp.js
@@ -22,7 +26,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# others
-.env*.local
-.vercel
-next-env.d.ts
+**/.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini
+
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+bun.lockb
