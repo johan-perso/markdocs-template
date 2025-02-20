@@ -16,6 +16,7 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+      "@/.source": ["./.source/index.ts"],
       "@/*": ["./*"]
     },
     "plugins": [
@@ -24,6 +25,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/layout.config.jsx", "app/(home)/layout.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
