@@ -4,6 +4,20 @@
 
 @source '../node_modules/fumadocs-ui/dist/**/*.js';
 
+:root {
+	--color-fd-background: #F5F5F5;
+	--color-fd-card: #F1F1F1;
+}
+
+.dark {
+	--color-fd-background: #151515;
+	--color-fd-card: #191919;
+}
+
+article {
+	max-width: 900px !important;
+}
+
 main > div:nth-child(2) {
 	width: 100%;
 }
