@@ -29,6 +29,7 @@ export const baseOptions = {
       external: true,
     } : null
   ].filter(Boolean),
+  githubUrl: GITHUB_LINK.length ? GITHUB_LINK : undefined,
   nav: {
     title: PROJECT_NAME,
     transparentMode: 'top',
