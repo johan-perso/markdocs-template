@@ -19,5 +19,14 @@ export const docs = defineDocs({
 });
 
 export default defineConfig({
-  mdxOptions: {},
+  mdxOptions: {
+    rehypeCodeOptions: {
+      defaultLanguage: 'text',
+      fallbackLanguage: 'text',
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+    }
+  },
 });
