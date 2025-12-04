@@ -7,6 +7,7 @@ import {
 } from 'fumadocs-ui/page';
 import { notFound } from 'next/navigation';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { LLMCopyButton, ViewOptions } from '@/components/page-actions';
 
 const PROJECT_NAME = ''
 
@@ -20,10 +21,16 @@ export default async function Page(props: {
   const MDX = page.data.body;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full} breadcrumb={{ enabled: true, full: false, includeRoot: false, includeSeparator: true }} tableOfContent={{ style: 'clerk' }} tableOfContentPopover={{ style: 'clerk' }}>
+    <DocsPage toc={page.data.toc} full={page.data.full} breadcrumb={{ enabled: true, includeRoot: false, includeSeparator: true }} tableOfContent={{ style: 'clerk' }} tableOfContentPopover={{ style: 'clerk' }}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription>{page.data.description}</DocsDescription>
       <DocsBody>
+        <div className="flex flex-row gap-2 items-center border-b pt-2 pb-6">
+          <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
+          <ViewOptions
+            markdownUrl={`${page.url}.mdx`}
+          />
+        </div>
         <MDX components={{ ...defaultMdxComponents }} />
       </DocsBody>
     </DocsPage>
